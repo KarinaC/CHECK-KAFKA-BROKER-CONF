@@ -43,6 +43,7 @@ def checkconnection():
     else:
        print("curl no conecta.fin." + str(conestatus))
 
+
 ##------------------------------------------------------------------------------------------------------
 
 def consultaconf():
@@ -52,7 +53,6 @@ def consultaconf():
        rformat = r.json()
        appid=rformat.get('app').get('id')
        apps=rformat.get('app').get('env').get('KAFKA_BOOTSTRAP_SERVERS')
-       print("\n")
 
        if apps == properconf:
            print("######################")
